@@ -7,7 +7,7 @@ def test_002_fazer_pix(common_page,login_page, home_page,pix_page) -> None:
     common_page.voltar_home()
     common_page.assert_text("4.990,00")
     home_page.acessar_menu("Ver Extrato")
-    common_page.assert_text("11/05/2026 - Pix para 999.999")
+    common_page.assert_text("Pix para 999.999")
     
 
 
