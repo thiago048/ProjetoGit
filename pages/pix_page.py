@@ -6,7 +6,7 @@ class PixPage:
         self.chave_pix = page.get_by_role("textbox", name="Chave Pix:")
         self.valor_pix = page.get_by_role("textbox", name="Valor:")
         self.enviar_pix_button = page.get_by_role("button", name="Enviar Pix")
-        self.voltar_para_home = page.get_by_role("button", name="Voltar para a Home")
+        
 
     def fazer_pix(self, chave, valor):
         self.chave_pix.fill(chave)
@@ -17,8 +17,7 @@ class PixPage:
         expect(self.page.get_by_text("Transação Realizada com")).to_be_visible
         expect(self.page.get_by_text("A transação foi concluída com")).to_be_visible
 
-    def voltar_home(self):
-        self.voltar_para_home.click()
+
 
 
 
